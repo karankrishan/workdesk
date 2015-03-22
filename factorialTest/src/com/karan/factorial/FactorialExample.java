@@ -3,7 +3,7 @@ package com.karan.factorial;
 public class FactorialExample {
 
 	public static void main(String[] args) {
-		System.out.println(factorail(5));
+		System.out.println(factorail(6));
 	}
 
 	public static int factorail(int i) {
