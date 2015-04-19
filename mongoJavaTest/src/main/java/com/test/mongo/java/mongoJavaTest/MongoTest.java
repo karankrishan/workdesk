@@ -21,7 +21,7 @@ public class MongoTest {
 	public static void main(String[] args) {
 		MongoClient mongoClient = null;
 		try {
-			mongoClient = new MongoClient("localhost",27017);
+			mongoClient = new MongoClient("localhost", 27017);
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
 		}
@@ -29,15 +29,15 @@ public class MongoTest {
 		DBCollection collection = db.getCollection("test_collection");
 
 		BasicDBObject basicDBObject = new BasicDBObject();
-		basicDBObject.append("company", "society generale").
-		append("address", "whitefield");
+		basicDBObject.append("company", "society generale").append("address",
+				"whitefield");
 		collection.insert(basicDBObject);
-		
+
 		DBCursor find = collection.find();
-		
+
 		for (DBObject dbObject : find) {
 			System.out.println(dbObject);
 		}
 	}
-	
+
 }
